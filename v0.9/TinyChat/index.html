@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    
+    <!-- 头元素 -->    
+    <div class="ui attached stackable menu">
+        <div class="ui container" id="loginwait" style="display: block;">
+            <button class="ui positive button" id="loginbutton"><i class="sign in icon"></i> 登录</button>
+        </div>
+        <div class="ui container" id="logined" style="display: none;">
+            <button class="ui negative button" id="logoutbutton"><i class="sign out icon"></i> 登出</button>
+            <button class="ui right button" id="joinbutton"><i class="talk icon"></i> 加入房间</button>
+            <div class="ui top right attached label" id="labelusername"></div>
+        </div>
+    </div>
+
+    <!-- 登录输入框 -->
+    <div class="ui modal" id="logininput">
+        <div class="header">登录</div>
+        <div class="content">
+            <form class="ui form">
+                <div class="field">
+                    <label>用户名</label>
+                    <input type="text" placeholder="用户名" id="loginusername" />
+                </div>
+                <div class="field">
+                    <label>密码</label>
+                    <input type="password" placeholder="密码" id="loginpassword" />
+                </div>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui positive left button" id="loginsubmit">确定</div>
+            <div class="ui negative right button">取消</div>
+        </div>
+    </div>
+    
+    <!-- 加入房间输入框 -->
+    <div class="ui modal" id="joininput">
+        <div class="header">加入房间</div>
+        <div class="content">
+            <div class="ui form">
+                <div class="field">
+                    <label>房间名</label>
+                    <input type="text" placeholder="房间名" id="roomname" />
+                </div>
+                <div class="field">
+                    <label>房间密码</label>
+                    <input type="password" placeholder="房间密码" id="roompass" />
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui positive left button" id="joinsubmit">确定</div>
+            <div class="ui negative right button">取消</div>
+        </div>
+    </div>
+    
+    <!-- 错误框 -->
+    <div class="ui modal" id="errormessage">
+        <div class="header">错误</div>
+        <div class="content">
+            <div class="ui error message"></div>
+        </div>
+        <div class="actions">
+            <div class="ui positive button">确定</div>
+        </div>
+    </div>
+    
+    <br />
+    
+    <div class="ui container" id="msgcon">
+    
+        <!-- 标签页 -->
+        <div class="ui top attached tabular menu" id="roomtags">
+<!--            <button class="ui item active button" data-tab="first">First</button>-->
+        </div>
+        
+        <!-- 内容 -->
+<!--        <div class="ui bottom attached tab segment active" data-tab="first">-->
+        
+            <!-- 消息主体 -->
+<!--
+            <div class="ui container">
+                <div class="ui segment">
+                    <div class="field">
+                        <div class="ui message">
+                            <div class="ui orange ribbon label">Tom</div>
+                            <pre>hi</pre>
+                        </div>
+                        <div class="ui message">
+                            <div class="ui orange right ribbon label">me</div>
+                            <pre>hi</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+            <!-- 发送主体 -->
+<!--
+            <div class="ui container">
+                <div class="ui top attached segment" id="editor" contenteditable="true"></div>
+                <div class="ui bottom attached basic buttons">
+                    <button class="ui button"><i class="image icon"></i></button>
+                    <button class="ui button"><i class="send icon"></i></button>
+                    <button class="ui button"><i class="ban icon"></i></button>
+                    </div>
+            </div>
+        </div>
+-->
+    </div>
+    
+</body>
+
+</html>

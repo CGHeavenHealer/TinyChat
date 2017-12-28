@@ -1,0 +1,27 @@
+数据库设计
+
+TinyChat: database
+
+user: {
+    username: {
+        password: string,
+    },
+},
+room: {
+    roomname: {
+        roompass: string,
+        message: {
+            id_%d: {
+                sender: string,
+                time: number,
+                text: string,
+            },
+            id_cnt: number,
+        },
+        joined: {
+            username: {
+                lastseeid: number, // 注册时与当前message id保持一致
+            },
+        },
+    },
+},

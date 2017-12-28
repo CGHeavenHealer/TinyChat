@@ -1,0 +1,5 @@
+user a a
+user b b
+
+room t1 0
+room t2 0
